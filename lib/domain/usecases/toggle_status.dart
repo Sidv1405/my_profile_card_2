@@ -7,7 +7,7 @@ class ToggleStatus {
 
   ToggleStatus(this._userRepository);
 
-  Future<User> changeStatus(User user){
-    return _userRepository.toggleStatus(user);
+  Future<User> changeStatus(String userId, bool isActive) async {
+    return _userRepository.toggleStatus(userId, isActive);
   }
 }
